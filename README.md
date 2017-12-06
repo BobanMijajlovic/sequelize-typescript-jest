@@ -9,7 +9,7 @@ The database name / username / password are all `app`. If you've got docker-comp
 Then, in another terminal, run `./script/test`.
 ## Where to look
 
-- `src/users/models/User.model.ts` is the model being tested.
+- `src/users/User.model.ts` is the model being tested.
 - `src/users/index.ts` is a file using the model.
 - `src/db.ts` is where the Sequelize is configured.
 - `spec/helpers/setup.ts` is the file with `beforeEach` hooks to clean the DB in tests.
