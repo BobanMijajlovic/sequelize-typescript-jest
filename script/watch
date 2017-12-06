@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+set -ex
+
+docker-compose pull
+docker-compose build --pull
+docker-compose up &
+
+npm install
+./node_modules/.bin/nodemon \
+  --ext ts,tsx,js,json,jade \
+  --exec ./node_modules/.bin/ts-node \
+  --watch src/ \
+  -- \
+  --inspect=9240 \
+  src/index.ts
+wait

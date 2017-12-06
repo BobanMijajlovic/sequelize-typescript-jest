@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+set -x
+
+exec node --inspect=9241 --nolazy \
+  ./node_modules/.bin/jest \
+  --runInBand \
+  --watch
+
+# exec ./node_modules/.bin/mocha \
+#   --inspect=9241 \
+#   --require ts-node/register \
+#   --full-trace \
+#   --watch \
+#   --watch-extensions ts,tsx,js,jsx,json \
+#   'spec/helpers/setup.ts' \
+#   'spec/**/*.ts'

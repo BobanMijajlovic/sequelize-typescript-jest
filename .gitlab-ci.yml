@@ -1,0 +1,7 @@
+test:
+  stage: test
+  script: ./script/test
+
+deploy:
+  stage: deploy
+  script: ./script/deploy
